@@ -1,0 +1,19 @@
+<div class="grey-text text-darken-4 landing-card">
+	<h1>Welcome!</h1>
+	<p>{{about}}</p>
+
+
+	<form id="search-form" ng-submit="search()">		
+		<div class="input_field">
+			<input type="text" ng-model="city" placeholder="enter a city">
+		</div>
+
+		<div class="input_field">
+			<input type="text" ng-model="country" placeholder="enter a country code (e.g. US)">
+		</div>
+
+		<input type="submit" class="btn-flat btn-large amber white-text" value="Get me some forecasts!">
+	</form>
+	
+
+</div>

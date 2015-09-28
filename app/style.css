@@ -1,0 +1,114 @@
+
+input[type="text"]:focus:not([readonly]), 
+input[type="password"]:focus:not([readonly]), 
+input[type="email"]:focus:not([readonly]), 
+input[type="url"]:focus:not([readonly]), 
+input[type="time"]:focus:not([readonly]), 
+input[type="date"]:focus:not([readonly]), 
+input[type="datetime-local"]:focus:not([readonly]), 
+input[type="tel"]:focus:not([readonly]), 
+input[type="number"]:focus:not([readonly]), 
+input[type="search"]:focus:not([readonly]), 
+textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #212121 !important;
+    box-shadow: 0px 1px 0px 0px #212121 !important;
+}
+
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important;
+}
+
+body {
+	background-color: #eee;
+}
+
+.main {	
+	margin-top: 75px;
+}
+
+.forecasts-box {
+	height: 500px;
+	overflow-y: scroll;
+}
+
+.amber-text-dark {
+	color: #AA7813 !important;
+}
+
+body, html {
+  margin:0;
+  padding:0;
+  position:relative;
+  height:100%;
+}
+.loading {
+  position:relative;
+  height:100%;
+}
+.loading:before {
+  position:absolute;
+  content:"";
+  left:0;
+  bottom:0;
+  right:0;
+  top:0;
+  z-index:1000;
+  background: #eee no-repeat center center;
+  background-image: url('./loading-animation.gif');
+}
+.animate-view-container { position:relative; min-height: 100%; }
+.animate-view.ng-enter,
+.animate-view.ng-leave {
+    transition:1s linear all;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+.animate-view.ng-enter { opacity:0; z-index:100; }
+.animate-view.ng-enter.ng-enter-active { opacity:1; }
+.animate-view.ng-leave { opacity:1; z-index:99; }
+.animate-view.ng-leave.ng-leave-active { opacity:0; }
+
+
+#super-container {
+  position: absolute;
+  top: 75px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.neighbour {
+  margin: 5px;
+}
+
+::-webkit-input-placeholder {
+   color: #212121;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #212121;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #212121;  
+}
+
+:-ms-input-placeholder {  
+   color: #212121;  
+}
+
+.back {
+  width: 400px;
+  padding: auto;
+}
+
+.nav-wrapper {
+  padding-left: 20px;
+}
+
+#search-form {
+  margin-top: 50px;
+}

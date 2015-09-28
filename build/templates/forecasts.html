@@ -1,0 +1,28 @@
+<div ng-controller="ForecastsController" class="grey-text text-darken-4">
+	<h2 class="amber-text">City: {{forecasts.city.name}} / Country: {{forecasts.city.country}}</h2>
+	<h3 class="amber-text">Forecasts for the next 16 Days</h3>
+	<div class="forecasts-box">
+	
+		<table class="forecasts highlight responsive-table striped">
+			<thead>
+				<tr>
+					<th ng-click="sort_field = 'morn'; reverse_sort_field = !reverse_sort_field">Morning</th>
+					<th ng-click="sort_field = 'day'; reverse_sort_field = !reverse_sort_field">Day</th>
+					<th ng-click="sort_field = 'eve'; reverse_sort_field = !reverse_sort_field">Evening</th>
+					<th ng-click="sort_field = 'night'; reverse_sort_field = !reverse_sort_field">Night</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="forecast in forecasts.list | orderBy:sort_field:reverse_sort_field" ng-cloak="">
+					<td>{{forecast.temp.morn}}&deg;F</td>
+					<td>{{forecast.temp.day}}&deg;F</td>
+					<td>{{forecast.temp.eve}}&deg;F</td>
+					<td>{{forecast.temp.night}}&deg;F</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="row">
+	<a ng-click="reset()" class="btn-flat btn-large amber white-text">Search Again!</a>
+	</div>
+</div>

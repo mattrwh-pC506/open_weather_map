@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang='en' ng-app="app">
+<head>
+<!-- build:css ./_assets/combined.css -->
+<link rel="stylesheet" type="text/css" href="./bower_components/materialize/bin/materialize.css" />
+<link rel="stylesheet" type="text/css" href="./style.css" />
+<!-- endbuild -->
+<meta charset='UTF-8' />
+<title>Open Weather Map - Search Tool</title>
+</head>
+
+<body class="owm-body">
+
+<nav class="amber accent-4 white-text">
+    <div class="nav-wrapper">
+        <a href="#/" class="brand-logo white-text">Open Weather Map - Forecast Search Tool</a>
+    </div>
+</nav>
+<div  id="super-container" ng-class="{loading: isLoading}">
+
+<div class="container main">
+	<div class="animate-view-container">
+        <div ng-view class="animate-view center-align"></div>
+    </div>
+</div>
+<div>
+  
+<!-- build:js ./_assets/combined.js -->
+<script src="./bower_components/jquery/dist/jquery.js"></script>
+<script src="./bower_components/materialize/dist/js/materialize.js"></script>
+<script src="./bower_components/angular/angular.js"></script>
+<script src="./bower_components/angular-route/angular-route.js"></script>
+<script src="./bower_components/angular-animate/angular-animate.js"></script>
+<script src="./bower_components/angular-materialize/src/angular-materialize.js"></script>
+<script src="./app.js"></script>
+<script src="./routes.js"></script>
+<script src="./openWeatherMapApi.js"></script>
+<script src="./currentStateDataService.js"></script>
+<script src="./controllers.js"></script>
+<!-- endbuild -->
+</body>
+</html>
