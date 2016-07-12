@@ -1,5 +1,6 @@
 app.constant("OPENWEATHERMAP_BASE_URL", "http://api.openweathermap.org/data/");
 app.constant("OPENWEATHERMAP_VERSION", "2.5/");
+app.constant("OPENWEATHER_APPID", "59e903a164e5d565d10fe3f8799f5f27")
 
 
 app.factory("responseHandlers", function() {
@@ -28,8 +29,8 @@ app.factory("responseHandlers", function() {
 });
 
 app.factory("openWeatherMapApiService", 
-	["$http", "OPENWEATHERMAP_BASE_URL", "OPENWEATHERMAP_VERSION", "responseHandlers",
-		function($http, OPENWEATHERMAP_BASE_URL, OPENWEATHERMAP_VERSION, responseHandlers) {
+	["$http", "OPENWEATHERMAP_BASE_URL", "OPENWEATHERMAP_VERSION", "OPENWEATHER_APPID", "responseHandlers",
+		function($http, OPENWEATHERMAP_BASE_URL, OPENWEATHERMAP_VERSION, OPENWEATHER_APPID, responseHandlers) {
 	
 			function getDailyForecast(city, country_code) {
 				var forecast_type = "daily/";
@@ -38,7 +39,9 @@ app.factory("openWeatherMapApiService",
 		        		q: city + ", " + country_code,
 		        		mode: 'json',
 		        		units: 'Imperial',
-		        		cnt: 16
+		        		cnt: 16,
+                metric: 'Celsius',
+                APPID: OPENWEATHER_APPID,
 		        	},
 		        	cache: true
 		        	

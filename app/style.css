@@ -19,7 +19,8 @@ textarea.materialize-textarea:focus:not([readonly]) {
 }
 
 body {
-	background-color: #eee;
+	background-color: #212123;
+  color: white;
 }
 
 .main {	
@@ -27,12 +28,8 @@ body {
 }
 
 .forecasts-box {
-	height: 500px;
+	height: 450px;
 	overflow-y: scroll;
-}
-
-.amber-text-dark {
-	color: #AA7813 !important;
 }
 
 body, html {
@@ -53,7 +50,7 @@ body, html {
   right:0;
   top:0;
   z-index:1000;
-  background: #eee no-repeat center center;
+  background: #212123 no-repeat center center;
   background-image: url('./loading-animation.gif');
 }
 .animate-view-container { position:relative; min-height: 100%; }
@@ -71,10 +68,13 @@ body, html {
 .animate-view.ng-leave { opacity:1; z-index:99; }
 .animate-view.ng-leave.ng-leave-active { opacity:0; }
 
+.search-button {
+  margin-top: 10px;
+}
 
 #super-container {
   position: absolute;
-  top: 75px;
+  top: 0px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -85,19 +85,19 @@ body, html {
 }
 
 ::-webkit-input-placeholder {
-   color: #212121;
+   color: white;  
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: #212121;  
+   color: white;  
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: #212121;  
+   color: white;  
 }
 
 :-ms-input-placeholder {  
-   color: #212121;  
+   color: white;  
 }
 
 .back {
@@ -111,4 +111,13 @@ body, html {
 
 #search-form {
   margin-top: 50px;
+}
+
+td, tr {
+  padding: 15px 45px 0px 45px;
+}
+
+table {
+  background-color: rgba(255, 255, 255, 0.16);
+  color: white;
 }
